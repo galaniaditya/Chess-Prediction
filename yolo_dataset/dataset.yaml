@@ -1,17 +1,17 @@
 names:
-  0: K
-  1: Q
-  2: R
-  3: B
-  4: N
-  5: P
-  6: k
-  7: q
-  8: r
-  9: b
-  10: n
-  11: p
-  12: .
+  0: .
+  1: K
+  2: Q
+  3: R
+  4: B
+  5: N
+  6: P
+  7: k
+  8: q
+  9: r
+  10: b
+  11: n
+  12: p
 nc: 13
 train: C:\Users\galan\Chess_Prediction_Project\yolo_dataset\images\train
 val: C:\Users\galan\Chess_Prediction_Project\yolo_dataset\images\val

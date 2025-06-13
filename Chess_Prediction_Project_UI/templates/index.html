@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Chess Prediction</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    input[type="file"] {
+      margin: 10px 0;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    img {
+      margin-top: 20px;
+      border: 4px solid #ccc;
+      border-radius: 8px;
+    }
+
+    h3 {
+      color: #222;
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #444;
+    }
+
+    strong {
+      color: #2c3e50;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Chess Board Image</h2>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <br>
+    <input type="submit" value="Predict">
+  </form>
+
+  {% if image_path %}
+    <h3>Uploaded Image:</h3>
+    <img src="{{ image_path }}" width="300">
+  {% endif %}
+
+  {% if predicted_label %}
+    <h3>Prediction:</h3>
+    <p><strong>{{ predicted_label }}</strong></p>
+  {% endif %}
+</body>
+</html>
